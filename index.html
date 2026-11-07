@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кружок психологии «Инсайт»</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { color: #333; background-color: #fcfbfa; line-height: 1.6; }
+        header { background-color: #1e4d50; color: white; padding: 20px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .container { width: 85%; max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: #e2b13c; }
+        .hero { background: linear-gradient(rgba(30, 77, 80, 0.8), rgba(30, 77, 80, 0.9)), url('https://unsplash.com') no-repeat center center/cover; color: white; padding: 100px 0; text-align: center; }
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .hero p { font-size: 1.3rem; max-width: 600px; margin: 0 auto 30px; }
+        .btn { background-color: #e2b13c; color: #1e4d50; padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 5px; transition: background 0.3s; display: inline-block; border: none; cursor: pointer; }
+        .btn:hover { background-color: #f1c453; }
+        section { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 50px; color: #1e4d50; font-size: 2rem; position: relative; }
+        .section-title::after { content: ''; display: block; width: 50px; height: 3px; background-color: #e2b13c; margin: 10px auto 0; }
+        .grid { display: flex; gap: 30px; flex-wrap: wrap; }
+        .card { flex: 1; min-width: 280px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid #1e4d50; }
+        .card h3 { margin-bottom: 15px; color: #1e4d50; }
+        .schedule-list { list-style: none; max-width: 600px; margin: 0 auto; }
+        .schedule-list li { background: white; padding: 15px 20px; margin-bottom: 10px; border-left: 4px solid #e2b13c; box-shadow: 0 2px 5px rgba(0,0,0,0.05); display: flex; justify-content: space-between; }
+        .form-box { max-width: 500px; margin: 0 auto; background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+        footer { background-color: #1a1a1a; color: #999; text-align: center; padding: 20px 0; font-size: 0.9rem; }
+        @media (max-width: 768px) { .container { flex-direction: column; gap: 15px; } nav a { margin: 0 10px; } .hero h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h2>Кружок «Инсайт»</h2>
+            <nav>
+                <a href="#about">О нас</a>
+                <a href="#features">Направления</a>
+                <a href="#schedule">Расписание</a>
+                <a href="#join">Записаться</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Познай себя и окружающих</h1>
+            <p>Студенческий психологический кружок — место, где научно, просто и тепло говорят о ментальном здоровье.</p>
+            <a href="#join" class="btn">Присоединиться</a>
+        </section>
+
+        <section id="about" class="container">
+            <div style="width: 100%;">
+                <h2 class="section-title">О нашем кружке</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto;">Мы собираемся каждую неделю, чтобы обсуждать актуальные темы психологии, разбирать кейсы, проводить тренинги и учиться справляться со стрессом во время сессии. Никакой скучной теории — только интерактивные практики и поддержка.</p>
+            </div>
+        </section>
+
+        <section id="features" style="background-color: #f3f6f6;">
+            <div class="container" style="flex-direction: column;">
+                <h2 class="section-title">Чем мы занимаемся</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h3>Разбор кейсов</h3>
+                        <p>Анализируем реальные психологические ситуации, паттерны поведения и учимся понимать мотивы людей.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Борьба со стрессом</h3>
+                        <p>Осваиваем техники медитации, тайм-менеджмента и психологической самопомощи при выгорании.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Кинотренинги</h3>
+                        <p>Смотрим культовые кинокартины и разбираем психологические портреты персонажей с научной точки зрения.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="schedule">
+            <div class="container" style="flex-direction: column;">
+                <h2 class="section-title">Расписание встреч</h2>
+                <ul class="schedule-list">
+                    <li><strong>Вторник, 18:00</strong> <span>Лекторий и разбор теории (Ауд. 402)</span></li>
+                    <li><strong>Четверг, 18:30</strong> <span>Практический тренинг и кофе-брейк</span></li>
+                    <li><strong>Суббота, 16:00</strong> <span>Киноклуб и обсуждение</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="join" style="background-color: #f3f6f6;">
+            <div class="container" style="flex-direction: column;">
+                <h2 class="section-title">Стать частью команды</h2>
+                <div class="form-box">
+                    <form onsubmit="alert('Заявка отправлена!'); return false;">
+                        <div class="form-group">
+                            <label>Ваше имя</label>
+                            <input type="text" required placeholder="Иван Иванов">
+                        </div>
+                        <div class="form-group">
+                            <label>Группа / Факультет</label>
+                            <input type="text" required placeholder="ИСТ-221">
+                        </div>
+                        <div class="form-group">
+                            <label>Почему вы хотите к нам?</label>
+                            <textarea rows="4" placeholder="Пара слов о вашем интересе к психологии..."></textarea>
+                        </div>
+                        <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Студенческий кружок психологии «Инсайт». Разработано в рамках учебного проекта.</p>
+    </footer>
+
+</body>
+</html>
